@@ -1,0 +1,50 @@
+
+<head>
+  <title>whereabouts is...</title>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/moment.js/2.5.0/moment.min.js" /></script>
+    <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+</head>
+
+<body>
+  <div id="main">
+    {{> filters}}
+    {{> deviceList}}
+  </div>
+</body>
+
+<template name="deviceDetails">
+  {{#if unnamedDevice}}
+    <div>
+      <label>Name this device...<label>
+      <input type="text" id="deviceName" placeholder="laptop, mobile, desktop..."></input>
+    </div>
+  {{/if}}
+</template>
+
+
+<template name="filters">
+  <div id="filter">
+    <input type="text" id="user" placeholder="..."></input>
+  </div>
+</template>
+
+<template name="deviceList">
+  <div class="devices">
+    {{#each devices}}
+      {{#if connected}}
+        <div class="device {{locationId}}">
+          {{#if isBasement locationName}}
+            <span class="name">{{username}}</span> is lurking in the basement...
+          {{else}}
+            <span class="name">{{username}}</span> is in {{locationName}}
+          {{/if}}
+        </div>
+      {{else}}
+        <div class="device {{connected}}">
+          <span class="name">{{username}}</span> was last seen on <b>{{disconnectedDate}}</b> at <b>{{disconnectedTime}}</b>
+        </div>
+      {{/if}}
+    {{/each}}
+  </div>
+
+</template>
