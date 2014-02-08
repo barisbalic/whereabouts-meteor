@@ -2,7 +2,7 @@
 
 This is a basic front-end for the [whereabouts-syslog-tail](https://github.com/barisbalic/whereabouts-syslog-tail).  It depends entirely on that being in place and persisting to a mongodb database.
 
-For support/questions, join the general conversation channel at [![Gitter](https://badges.gitter.im/barisbalic/https://badges.gitter.im/barisbalic/whereabouts-syslog-tail.png.png)](https://gitter.im/barisbalic/whereabouts-syslog-tail)
+For support/questions, join the general conversation channel at [![Gitter](https://badges.gitter.im/barisbalic/whereabouts-syslog-tail.png)](https://gitter.im/barisbalic/whereabouts-syslog-tail)
 
 ## Installation
 
